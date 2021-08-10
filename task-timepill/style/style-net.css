@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: 'Microsoft YaHei UI','Microsoft YaHei','微软雅黑',"MicrosoftJhengHei", '华文细黑', STHeiti, MingLiu,serif;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 30%;
+}
+
+.upper{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+}
+
+.bottom-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.bottom-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #ff0033;
+}
+
+.english{
+    font-size: 40px;
+}

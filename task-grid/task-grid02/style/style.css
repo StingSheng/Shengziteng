@@ -1,0 +1,147 @@
+*{
+    padding: 0px;       /* 全局设定，有需要的时候会自动覆盖 */
+    margin: 0px;
+    border-width: 0px;
+}
+
+html,body{              /* 页面占满整个窗口 */
+    width: 100%;
+    height: 100%;
+}
+
+.page{                  /*页面设计*/
+    display: flex;      /*以下三行将主题内容水平垂直居中*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #090723;  /*背景颜色设定*/
+}
+
+.content{
+    display: grid;              /*icon包grid三列布局*/
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+a{                              /*点击icon包会跳转的链接*/
+    height: 338px;
+    width: 330px;
+    text-decoration: none;      /*取消掉a标签里面文本的下划线问题*/
+}
+
+.upper-icon-bag{                /*上面的icon包背景颜色等设定*/
+    background-color: white;
+    border-radius: 5px;         /*圆角*/
+    cursor: pointer;
+    height: 338px;
+    width: 330px;
+    transition: 0.5s;           /*动画过渡时间*/
+}
+
+.count-img{                     /*账户头像*/
+    display: flex;
+    justify-content: center;    /*水平居中*/
+    padding-top: 25px;          /*按照原网站设计边距*/
+    transition: 0.5s;           /*动画过度时间*/
+}
+
+.count-img > img{               /*账户头像的照片*/
+    height: 40px;   
+    border-radius: 20px;        /*圆角半径为图片的边长一般，以圆形头像显示*/
+    transition: 0.5s;           /*过度时间*/
+}
+
+.author{                        /*作者名字设计*/
+    display: flex;
+    color: rgba(0,0,0,0.6);     
+    justify-content: center;    /*居中显示*/
+    height: 22px;
+    font-size: 16px;
+    margin-top: 9px;            /*按照原网站设计边距*/
+    transition: 0.5s;
+}
+
+.upper-grid{                    /*icon部分使用grid五列布局*/
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 16px;               /*按照原网站设计高度，宽度，边距等*/
+    height: 210px;
+    width: 298px;
+    transition: 0.5s;
+}
+
+.upper-icon{                    /*每个icon网格所占的高宽*/
+    display: flex;
+    justify-content: center;    /*icon在所占网格中处于居中位置*/
+    align-items: center;
+    height: 70px;
+    width: 59px;
+    font-size: 26px;
+    transition: 0.5s;           /*过渡时间*/
+}
+
+.upper-icon-bag:hover{          /*icon包过度，放大1.07倍*/
+    transform: scale(1.07);
+}
+
+.upper-icon-bag:hover .upper-icon{      /*iconguodu，放大1.07倍*/
+    transform: scale(1.07); 
+}
+
+.upper-icon-bag:hover .author{          /*作者名字过度，放大1.07倍*/
+    transform: scale(1.07);
+}
+
+.upper-icon-bag:hover .count-img{       /*账户头像过度，放大1.07倍*/
+    transform: scale(1.07);
+}
+
+.bottom-icon-bag{                       
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;                    /*指针悬停变手形*/
+    width: 330px;                       /*按照原网站设计高宽边距*/
+    height: 338px;
+    transition: 0.5s;
+}
+
+.bottom-grid{                           
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/*下面icon包的设计，grid三列布局*/
+    margin: 16px;                       /*按照原网站设计边距大小等*/
+    height: 210px;
+    width: 298px;
+    transition: 0.5s;   
+}
+
+
+/* 以下布局及设计方法与上半部分的设计相同 */
+.bottom-icon{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 105px;
+    width: 99px;
+    transition: 0.5s;
+}
+
+.bottom-icon > img{
+    max-width: 58px;
+    max-height: 66px;
+}
+
+.bottom-icon-bag:hover{
+    transform: scale(1.07);
+}
+
+.bottom-icon-bag:hover .bottom-icon{
+    transform: scale(1.07);
+}
+
+.bottom-icon-bag:hover .author{
+    transform: scale(1.07);
+}
+
+.upper-icon-bag:hover .count-img{
+    transform: scale(1.07);
+}

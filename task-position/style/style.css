@@ -1,0 +1,112 @@
+*{
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    margin: auto;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.title{
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    top: 0px;
+}
+
+.descripe{
+    position: relative;
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    top: 60px;
+    padding: 20px;
+}
+
+.text{
+    font-size: 13.1px;
+    margin: 0px;
+}
+
+.foot{
+    position: fixed;
+    background-color: white;
+    height: 120px;
+    width: 100%;
+    bottom: 0px;
+}
+
+
+.choice{
+    position: relative;
+    align-items: flex-end;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.add{
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-color: red;
+    border-bottom-color: red;
+    border-left-color: red; 
+    border-right-style: hidden;
+    border-width: 5px;
+    right: -300px;
+    bottom: -70px;
+    font-size: 30px;
+    color: red;
+}
+
+.block{
+    position: absolute;
+    border-style: solid;
+    border-right-width: 50px;
+    border-top-width: 50px;
+    border-left-width: 50px;
+    border-bottom-width: 50px;
+    border-bottom-color: red;
+    border-right-color: red;
+    border-left-color:rgba(255, 255, 255,0);
+    border-top-color: rgba(255, 255, 255,0);
+    height: 0px;
+    width: 0px;
+    right: -300px;
+    bottom: -70px;
+}
+
+.buy{
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: rgb(255, 0, 0);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-color: red;
+    border-bottom-color: rgb(255, 0, 0);
+    border-left-color: red; 
+    border-right-color: red;
+    right: -500px;
+    bottom: -70px;
+    text-align: left;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,445 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    height: 100%;
+    width: 1200px;      /*设定整个内容显示部分的宽度，防止页面宽度增加时内容分散*/
+    margin: auto;       /*用于将整个内容居中*/
+}
+
+header{
+    display: flex;
+    width: 1200px;      /*设置头部宽度，与内容保持一致*/
+    align-items: flex-start;/*将头部里面的内容物（logo）置于开头位置*/
+    margin: 15px 0px;
+}
+
+.logo{                  /*对logo进行大小和相对位置的设定*/
+    height: 40px;       
+    margin: 10px 10px;
+}
+
+.content{
+    width: 1200px;      /*设置内容占的宽度*/
+    margin: auto;
+}
+
+.upper{
+    display: flex;      /*上面部分的排布为列排布*/
+    justify-content: center;    /*内容居中*/
+    flex-direction: column;
+    width: 100%;
+    background-image: linear-gradient(#f1f1f1,#fff);    /*背景渐变*/
+    padding-bottom: 30px;       /*与中间部分分界*/
+}
+
+.upper-title{
+    text-align: center;     /*上面部分标题居中*/
+    padding-top: 20px;      /*标题不顶上面边界*/
+    font-size: 20px;        /*字体大小*/
+    font-weight: bold;      /*字体加粗*/
+}
+
+.upper-choice{              /*导航栏设计*/
+    display: flex;          /*横向排布*/
+    justify-content: center;/*居中处理*/
+    width: 100%;
+}
+
+.upper-choice > ul{
+    list-style: none;       /*去掉列表的标签*/
+    display: flex;
+}
+
+.choice-items{              /*设置选项的字体大小，边距等*/
+    font-size: 10px;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+
+.first-choice{
+    color: rgb(48, 172, 48);/*第一个选择设置绿色，意为选中*/
+}
+
+input:hover{
+    color: rgb(48, 172, 48);   /*当指针悬浮于上时内容变成绿色意为选中*/
+    cursor: pointer;            /*当指针悬浮于上时，指针变为手指，意为可点击选择*/
+}
+
+.upper-music{                   /*音乐界面设置*/
+    display: grid;              /*网格布局*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*网格布局平均分五列*/
+    gap: 20px;                  /*网格沟壑宽度*/
+    margin: 15px 60px;  
+}
+
+.upper-content{             
+    display: flex;              /*每个部分的排列为竖向排列*/
+    flex-direction: column;
+    justify-content: center;    /*内容居中*/
+    width: 200px;               /*每一个宽度为200px*/
+}
+
+.upper-img{                     /*图片展示区域*/
+    position: relative;     
+    overflow: hidden;   
+    cursor: pointer;            /*光标悬停时变成手形*/
+}
+
+.upper-music-img{               /*设置图片大小*/
+    width: 200px;
+    transition: all 0.75s;      /*变换过度的时间*/
+}
+
+.upper-cover-mask{              /*一个北京蒙板*/
+    position: absolute;         /*定位到覆盖整个图*/
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(0,0,0);
+    opacity: 0;                     /*过度之前设置全透明*/
+    transition: all 0.5s;       /*过渡时间0.5s*/
+}
+
+.upper-cover-play{              /*播放按钮*/
+    position: absolute;         /*定位到图像正中央*/
+    height: 70px;               /*宽度设定*/
+    width: 70px;
+    left: 50%;
+    top: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+    opacity: 0;                 /*过度之前全透明*/
+    transform: scale(0.7);      /*过渡的变换为缩小到原来的70%*/
+    transition: all 0.5s;       /*过渡时间0.5s*/
+}
+
+.upper-img:hover .upper-music-img{  
+    transform: scale(1.07); /*当指针悬停在整个图片上的时候，图片扩大到原来107%*/
+}
+
+.upper-img:hover .upper-cover-mask{
+    opacity: 0.2;/*当指针悬停在整个图片上的时候，蒙板的透明度变成0.2，显示为背景变暗*/
+}
+
+.upper-img:hover .upper-cover-play{
+    opacity: 1;    /*当指针悬停在整个图片上上的时候，播放按完全不透明，大小也不变化*/
+    transform: scale(1);
+}
+
+/* 设计用来描述的文字的样式 */
+.upper-descripe > span{
+    font-size: 10px;
+    width: 200px;
+}
+
+/* 设计播放量行的文字样式 */
+.upper-number{
+    display: flex;
+    font-size: 10px;
+    color: rgba(0,0,0,0.4);
+}
+
+/* 整个中间部分的样式 */
+.middle{
+    width: 100%;
+    background-image: linear-gradient(#f1f1f1,#fff);
+    padding-bottom: 30px;
+}
+
+/* 中间部分标题的设计 */
+.middle-title{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 中间部分导航栏的设计 */
+.middle-choice{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* 左侧播放按钮的设计 */
+.play{
+    position: absolute;
+    left: 60px;
+    top: 12px;
+}
+
+/* 导航栏音乐类型的列表设计，与上半部分相同 */
+.middle-choice > ul{
+    display: flex;
+    list-style: none;
+}
+
+/* 按钮部分以列表的形式设计 */
+.play-button > ul{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    display: flex;
+    list-style: none;
+    border-width: 1px;
+    border-color: black;
+}
+
+.play-img{
+    position: absolute;
+    left: -20px;
+}
+
+/* 中间部分布局三列均分 */
+.middle-music{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 30px 60px;
+}
+
+/* 中间部分横向布局，且每个内容上半部分有一条极细的直线 */
+.middle-content{
+    display: flex;
+    border-top: 1px solid #f1f1f1;/*极细的直线*/
+    padding-top: 10px;
+}
+
+/* 该部分设计指针悬停过度，与上面部分相同 */
+.middle-img{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.middle-music-img{
+    width: 90px;
+    transition: all 0.75s;
+}
+
+.middle-cover-mask{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.middle-cover-play{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.5s;
+}
+
+.middle-img:hover .middle-music-img{
+    transform: scale(1.07);
+}
+
+.middle-img:hover .middle-cover-mask{
+    opacity: 0.2;
+}
+
+.middle-img:hover .middle-cover-play{
+    opacity: 1;
+    transform: scale(1);
+}
+/* 以上部分均为过度的设计 */
+
+/* 内容中间部分又纵向排列并且居中 */
+.middle-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    padding-left: 15px;
+}
+
+/* 新歌名字，溢出以省略号形式显示 */
+.middle-name{
+    font-size: 10px;
+    width: 167px;
+    padding-bottom: 2.5px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+}
+
+/* 歌手名字，溢出部分以省略号形式显示 */
+.middle-singer{
+    color: rgba(0,0,0,0.4);
+    font-size: 10px;
+    width: 140px;
+    padding-top: 2.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+/* 歌曲时间样式 */
+.middle-time{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 2;
+    font-size: 10px;
+    color: rgba(0,0,0,0.4);
+}
+
+/* 下面部分的整体设计 */
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 1200px;
+    background-image: linear-gradient(#f1f1f1,#fff);
+    padding-bottom: 30px;
+}
+
+/* 下半部分标题 */
+.bottom-title{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 下半部分导航栏 */
+.bottom-choice{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottom-choice > ul{
+    display: flex;
+    list-style: none;
+}
+
+/* 下半部分排列方式 */
+.bottom-music{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    gap: 20px;
+    margin: 15px 60px;
+}
+
+.bottom-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* 以下为过度动画的设计 */
+.bottom-img{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bottom-music-img{
+    width: 200px;
+    transition: all 0.75s;
+}
+
+.bottom-cover-mask{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(0,0,0);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.bottom-cover-play{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.5s;
+}
+
+.bottom-img:hover .bottom-music-img{
+    transform: scale(1.07);
+}
+
+.bottom-img:hover .bottom-cover-mask{
+    opacity: 0.2;
+}
+
+.bottom-img:hover .bottom-cover-play{
+    opacity: 1;
+    transform: scale(1);
+}
+/* 以上为过渡动画的设计 */
+
+
+/* MV名字样式设计 */
+.bottom-name{
+    width: 200px;
+    font-size: 12.5px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+}
+
+/* 歌手文本样式设计 */
+.bottom-singer{
+    width: 200px;
+    font-size: 12.5px;
+    color: rgba(0,0,0,0.4);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+}
+
+/* 观看人数部分横向布局 */
+.seen{
+    display: flex;
+}
+
+/* 人数样式设计 */
+.bottom-number{
+    font-size: 12.5px;
+    color: rgba(0,0,0,0.4);
+}
+
+/* 所有span标签指针悬停颜色设计（导航栏的项目） */
+span:hover{
+    cursor: pointer;
+    color: rgb(48, 172, 48)
+}
+
+/* 底部整块黑色 */
+.footer{
+    height: 100px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

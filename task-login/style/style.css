@@ -1,0 +1,90 @@
+*{                          /*设置边距和*/
+    padding: 0px;
+    margin: 0px;
+    border-width: 0px;
+}
+
+html,body{                  /*占满整个屏幕*/
+    height: 100%;
+    width: 100%;
+}
+
+.all{                       /*界面居中*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+}
+
+.view{                      /*设置界面的宽高即圆角外形*/
+    position: relative;
+    background-color:white;
+    border-radius: 3px;
+    height: 277px;
+    width: 340px;
+}
+
+.login-title{               /*登录界面标题的字体相关设置和位置设置*/
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;      /*字体大小和加粗*/
+    width: 120px;
+    left: 110px;            /*位置调整*/
+    top: 30px;
+}
+  
+
+.count{                     /*账号框的设定*/
+    position: absolute;
+    border-radius: 3px;     /*圆角*/
+    border-color: #6A6A6A;
+    border-width: 0.001px;
+    height: 32px;           /*高宽*/
+    width: 280px;
+    top: 80px;              /*位置*/
+    left: 30px;
+    outline: none;          /*选中后边框颜色*/
+}
+
+.password{                  /*密码框设定-同账号框*/
+    position: absolute;
+    border-radius: 3px;
+    border-color: #6A6A6A;
+    border-width: 0.001px;
+    height: 32px;
+    width: 280px;
+    top: 140px;
+    left: 30px;
+    outline: none;
+}
+
+.remember{                  /*记住密码复选框和文字位置字体设置*/
+    position: absolute;
+    left: 55px;
+    font-size: 10px;
+    font-weight: bold;
+    top: 190px;
+}
+
+.check{                     /*复选框相对记住密码文字位置的调整*/
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: 60px;
+    top: 2px;
+}
+
+.submit{                    /*登录按钮设置*/
+    position: absolute;
+    height: 35px;           /*宽高设置*/
+    width: 280px;
+    background-color: #1890ff;
+    color: white;         
+    border-radius: 5px;
+    left: 30px;             /*圆角*/
+    top: 220px;
+}
+
+.submit:active{
+    background-color: #196ab6;
+}

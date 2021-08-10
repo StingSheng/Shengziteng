@@ -1,0 +1,665 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* 将所有的a标签里面的文字内容全部去掉下划线 */
+a{      
+    text-decoration: none;
+}
+
+/* 头部固定 */
+header{
+    position: fixed;
+    background-color: white;
+    height: 58px;
+    width: 100%;
+}
+
+/* 初始状态不展示的菜单页面 */
+.page-view{
+    display: none;
+}
+
+/* 初始状态下展示的头部页面 */
+.origin-view{
+    display: block;
+}
+
+/* 固定的头部的盒子 */
+.header-bar{
+    position: relative;
+    /* 固定在头部，不随滚动条滚动 */
+    display: flex;
+    background-color: white;
+    height: 58px;
+    width: 100%;
+}
+
+/* 菜单按钮的位置大小设定 */
+.menu{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 20px;
+}
+
+/* 菜单图片大小设定 */
+.menu-button > img{
+    height: 18px;
+    width: 18px;
+}
+
+/* 点击菜单按钮弹出的菜单页面 */
+.open-page{
+    position: relative;
+    /* 固定位置 */
+    display: flex;
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+/* 关闭按钮的位置设计 */
+.close{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 20px;
+}
+
+/* 关闭按钮图片大小设计 */
+.close-button > img{
+    height: 18px;
+    width: 18px;
+}
+
+/* 打开菜单时显示的logo的位置大小设定 */
+.page-logo{
+    position: absolute;
+    width: 72px;
+    height: 18px;
+    left: 50%;
+    top: 20px;
+    margin-left: -36px;
+}
+
+/* logo图片大小设计 */
+.page-logo > img{
+    height: 18px;
+}
+
+/* 打开菜单时Sign in文本的位置及颜色设计 */
+.page-sign{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 18px;
+    color: #6e6d7a;
+}
+
+/* 打开菜单时Sign in文本光标悬停效果 */
+.page-sign:hover{
+    color: #ea4c89;
+}
+
+/* 打开菜单时弹出的选项的位置及大小设计 */
+.page-choice{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+    top: 58px;
+}
+
+/* 打开菜单时菜单里每个选项边距的设计 */
+.page-items{
+    padding: 20px 20px;
+    font-size: 20px;
+}
+
+/* 菜单里选项文本颜色设计 */
+.page-items > a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* 给菜单里面的选项文本添加光标悬停变色效果 */
+.page-items > a:hover{
+    color: #ea4c89;
+}
+
+/* 将选项设置为0*0大小 */
+.choice-items{
+    width: 0px;
+    height: 0px;
+}
+
+/* 将选项文本设置为透明 */
+.choice-items > a{
+    color: rgba(0, 0, 0, 0);
+}
+
+/* 黑色的logo放在头部的水平居中位置 */
+.logo-black{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -9px;
+    margin-left: -36px;
+    height: 18px;
+    width: 72px;
+}
+
+/* 黑色logo大小设定 */
+.logo-black > img{
+    height: 18px;
+}
+
+/* Sign in文本的颜色大小位置设计 */
+.sign-in-text{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 18px;
+    color: #6e6d7a;
+}
+
+/* 给Sign in文本添加光标悬停变色效果 */
+.sign-in-text:hover{
+    color: #ea4c89;
+}
+
+/* 将Sign up按钮设计为0*0大小，以不显示 */
+.sign-in-button{
+    height: 0px;
+    width: 0px;
+}
+
+.sign-in-button > p{
+    font-size: 0px;
+    height: 0px;
+    width: 0px;
+}
+
+/* 主体内容部分的设计 */
+main{
+    /* 占满整个屏幕宽度 */
+    width: 100%;
+    /* 设置与顶部的间距，与header分开 */
+    padding-top: 58px;
+    /* 背景颜色 */
+    background-color: #f9f8fd;
+}
+
+/* 主题内容的上层部分内容的位置调整 */
+.main-upper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* 上层部分图片的设计 */
+.upper-img{
+    width: 100%;
+    height: auto;
+}
+
+.upper-img > img{
+    width: 90%;
+    margin: 100px 5%;
+}
+
+/* 上层部分标题的设计（大小，位置） */
+.upper-title{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+/* 标题的字体设计 */
+.upper-title > p{
+    width: 90%;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+}
+
+/* 上层部分内容的位置设计 */
+.upper-content{
+    display: flex;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+}
+
+/* 内容的字体设计 */
+.upper-content > p{
+    width: 80%;
+    font-size: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* 上层部分按钮的设计 */
+.upper-button{
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* 水平垂直居中 */
+    justify-content: center;
+    align-items: center;
+    /* 光标手形变换 */
+    cursor: pointer;
+}
+
+/* 按钮的字体，背景，圆角等设计 */
+.upper-button > input{
+    height: 40px;
+    width: 82px;
+    /* 圆角 */
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    /* 背景 */
+    background-color: #ea4c89;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* 主体部分的内容部分 */
+.main-content{
+    /* 背景白色 */
+    background-color: white;
+    /* 内边距拉开与footer和上层部分的距离 */
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+
+/* 内容页面 */
+.content-page{
+    /* 网格一列布局 */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    /* 用百分比表示宽度让内容大小自适应 */
+    width: 90%;
+    padding: 0px 5%;
+}
+
+/* 每一个块的宽度及边距设定 */
+.main-items{
+    /* 看宽度占内容页面的100%，而不是网页的100% */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 撑开块与块之间的距离 */
+.items-img{
+    margin-top: 30px;
+}
+
+/* 设计图片大小以及圆角 */
+.items-img > img{
+    width: 100%;
+    border-radius: 2%;
+}
+
+/* 每一个块的信息部分 */
+.items-information{
+    display: flex;
+    width: 100%;
+}
+
+/* 作者信息部分占一半定在最左边 */
+.items-author{
+    flex: 1;
+    left: 0px;
+}
+
+/* 作者信息部分内容布局 */
+.items-author > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    height: 24px;
+}
+
+/* 作者头像，圆形显示 */
+.author-img{
+    height: 24px;
+    width: 24px;
+}
+
+.author-img > img{
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* 作者名字溢出省略号显示 */
+.author-name{
+    height: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+/* 作者名字颜色 */
+.author-name > a{
+    color: black;
+}
+
+/* 作者名字光标悬停变色 */
+.author-name > a:hover{
+    color: #ea4c89;
+}
+
+/* 作者的背景（团队（team）或者大师（pro）） */
+.author-background{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 2px 3px;
+    color: white;
+    background-color: #ccc;
+    border-radius: 3px;
+    margin-top: 2px;
+    margin-left: 8px;
+}
+
+/* 作者背景光标悬停背景颜色变色 */
+.author-background:hover{
+    background-color: #ea4c89;
+    cursor: pointer;
+}
+
+/* 观看和喜欢人数位置占一半 */
+.items-view{
+    flex: 1;
+    right: 0px;
+}
+
+/* 横向布局及颜色设定 */
+.items-view > ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-size: 14px;
+    color: black;
+}
+/* 设置爱心图片大小 */
+.like-img > img{
+    height: 14px;
+    width: 14px;
+    padding: 0px 4px;
+    margin-top: 3px;
+    margin-left: 2px;
+    /* 光标悬停变手形 */
+    cursor: pointer;
+}
+
+/* 浏览图像的大小设置 */
+.view-img > img{
+    height: 14px;
+    width: 14px;
+    padding: 0px 4px;
+    margin-top: 3px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+/* 底部的大小及背景颜色设置 */
+footer{
+    background-color: #fafafa;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+/* 底部文字的设计 */
+footer > a{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+/* 底部logo的设计 */
+.logo-red{
+    width: 104px;
+    height: auto;
+}
+
+/* 底部文本内容的设计 */
+.bottom-descripe{
+    position: absolute;
+    width: 70%;
+    top: 150px;
+    left: 30px;
+    padding-bottom: 100px;
+}
+
+/* 当设备宽度超过768px时页面的布局 */
+@media screen and (min-width: 768px){
+    /* 上层内容的布局发生改变 */
+    .main-upper{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 97%;
+        height: 200px;
+        padding: 100px 20px;
+    }
+
+    .upper-img{
+        display: flex;
+        justify-content: center;
+        width: 40%;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .upper-img > img{
+        width: 300px;
+    }
+
+    /* 上层内容的文字部分不再居中，而是左对齐 */
+    .upper-descripe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .upper-title{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .upper-title > p{
+        text-align: start;
+    }
+
+    .upper-content{
+        justify-content: flex-start;
+    }
+
+    .upper-content > p{
+        text-align: start;
+    }
+
+    .upper-button{
+        justify-content: flex-start;
+    }
+
+    /* 页面变为两列布局 */
+    .content-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 20px;
+    }
+}
+
+/* 当设备宽度超过920px时的布局 */
+@media screen and (min-width: 920px){
+    /* 头部不再固定 */
+    header{
+        position: unset;
+        background-color: white;
+        height: 58px;
+        width: 100%;
+    }
+
+    .header-bar{
+        position: relative;
+        display: flex;
+        background-color: white;
+        height: 58px;
+        width: 100%;
+    }
+    
+    /* menu按钮隐藏 */
+    .menu{
+        width: 0px;
+        height: 0px;
+    }
+    
+    .menu-button > img{
+        height: 0px;
+        width: 0px;
+    }
+
+    /* 导航栏显示及其相关属性设置 */
+    .choice > ul{
+        position: absolute;
+        display: flex;
+        list-style: none; 
+        top: 50%;
+        margin-top: -9px;
+        left: 100px;       
+    }
+    
+    .choice-items{
+        width: auto;
+        height: 18px;
+    }
+    
+    /* 字体颜色 */
+    .choice-items > a{
+        color: rgba(0, 0, 0, 0.6);
+        padding: 0px 10px;
+    }
+    
+    /* 导航文本设置光标悬停变色 */
+    .choice-items > a:hover{
+        color: #ea4c89;
+    }
+
+    /* 黑色logo放在顶部的最左边 */
+    .logo-black{
+        position: absolute;
+        top: 50%;
+        left: 56px;
+        margin-top: -9px;
+        height: 18px;
+        width: 72px;
+    }
+    
+    .logo-black > img{
+        height: 18px;
+    }
+    
+    /* Sign in文本的位置在右侧 */
+    .sign-in-text{
+        position: absolute;
+        right: 120px;
+        top: 20px;
+        height: 18px;
+        color: #6e6d7a;
+    }
+    
+    /* Sign up位置在最右侧 */
+    .sign-in-button{
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        height: 40px;
+        width: 82px;
+        /* 文本居中 */
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .sign-in-button > p{
+        background-color: #ea4c89;
+        height: 14px;
+        width: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        padding: 13px 16px;
+        border-radius: 8px;
+    }
+    
+    /* 依然保持两列布局 */
+    .content-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 20px;
+    }
+}
+
+/* 当设备宽度大于1024px时的布局 */
+@media screen and (min-width: 1024px){
+    /* 内容采用三列布局 */
+    .content-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px 20px;
+    }
+}
+
+/* 当设备宽度大于1366时的布局 */
+@media screen and (min-width: 1366px) {
+    /* 采用四列布局并且设定固定边距 */
+    .content-page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px 20px;
+        margin: 0px 0px;
+        padding: 0px 79px;
+    }
+}
+
+/* 当设备的宽度大于1920px时的布局 */
+@media screen and (min-width: 1920px) {
+    /* 让整个主体内容居中处理 */
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 上层内容宽度固定 */
+    .main-upper{
+        width: 1500px;
+    }
+}

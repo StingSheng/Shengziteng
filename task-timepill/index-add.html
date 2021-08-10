@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <link rel="stylesheet" href="style/style-add.css">
+<body>
+    <header>
+        <a href="index.html" class="title">
+            <img src="imgs/logo_big.png" alt="#">
+            <p>时间胶囊</p>
+        </a>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="index.html" class="items">首页</a>
+                </li>
+                <li>
+                    <a href="index-add.html" class="items items-active">添加</a>
+                </li>
+                <li>
+                    <a href="index-open.html" class="items">打开</a>
+                </li>
+            </ul>
+        </div>
+        <div class="back">
+            <a href="index.html" class="back-text">回胶囊日记</a>
+        </div>
+    </header>
+    <div class="content">
+        <p class="add-pill">添加胶囊</p>
+        <p class="your-name">你的名字</p>
+        <p class="name-warning warning">名字必须填写</p>
+        <p class="name-error warning">名字不能超过20个字</p>
+        <input type="text" value="" class="name">
+        <p class="your-email">你的邮箱</p>
+        <p class="email-warning warning">邮箱必须填写</p>
+        <p class="email-error warning">邮箱必须是一个有效的电子邮箱地址</p>
+        <input type="text" class="email">
+        <p class="open-time">打开时间</p>
+        <p class="time-warning warning">打开时间必须填写</p>
+        <p class="time-error warning">打开时间格式不对</p>
+        <div class="time-part">
+            <input type="text" class="time">
+            <p class="time-hint">打开时间之前，胶囊内容是看不到的。</p>
+        </div>
+        <p class="pill-content">胶囊内容</p>
+        <p class="content-warning warning">内容必须填写</p>
+        <p class="content-error warning">内容不能能超过5000字</p>
+        <textarea class="content-input" cols="50" rows="8"></textarea>
+        <p class="content-hint">胶囊内容不能超过5000字</p>
+        <p class="hint">未到期提示信息</p>
+        <textarea class="hint-input" cols="30" rows="10"></textarea>
+        <p class="hint-hint">在打开时间之前打开胶囊，会看到提示信息</p>
+        <a class="add-button">添加胶囊</a>
+    </div>
+</body>
+<script src="./scripts/add.js"></script>
+</html>

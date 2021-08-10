@@ -1,0 +1,256 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border-width: 0px;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+header{
+    position: fixed;        /*固定在屏幕顶部*/
+    width: 100%;
+    height: 450px;
+    z-index: 1;
+    background-color: white;/*设置背景颜色，否则默认为透明*/
+}
+
+.top{
+    display: flex;
+}
+
+.top-left{
+    flex: 1;                /*与后面两组flex: 1;平分整个顶部宽度*/
+}
+
+.back{
+    position: absolute;
+    height: 60px;
+    top: 50px;
+    left: 40px;
+}
+
+.top-middle{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    flex: 1;
+}
+
+.title{
+    position: absolute;
+    line-height: 50px;
+    font-size: 50px;
+    font-family: SimHei;
+    font-weight: bold;
+    top: 60px;
+}
+
+.top-right{
+    flex: 1;
+}
+
+.share{
+    position: absolute;
+    height: 60px;
+    top: 50px;
+    right: 40px;
+}
+
+.middle{
+    top: 160px;
+    width: 100%;
+    position: absolute;
+}
+
+.middle > ul{           /*列表形式设计该部分*/
+    display: flex;
+    height: 80px;
+    border-radius: 40px;
+    background-color: rgba(233, 233, 233, 0.4);
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.search-button{
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    left: 80px;
+}
+
+.search-text{
+    position: absolute;
+    height: 60px;
+    left: 80px;
+    font-size: 35px;
+    color: rgba(0,0,0,0.3);
+    top: 5px;
+    background-color: rgba(233, 233, 233, 0);
+    list-style: none;   /*取消选中文本输入框的时候文本框边框颜色加深的现象*/
+    outline: none;
+    caret-color: black/* 设置光标颜色 */ 
+}
+
+table{          /*表格形式设计该部分*/
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    top: 260px;
+    padding-left: 60px;
+}
+
+.choice-item{
+    font-size: 35px;
+    color: rgba(0,0,0,0.35);
+    font-weight: bold;
+}
+
+.choice-active{         /*让其中一个处于选中状态*/
+    font-weight: bolder;
+    color: #1890ff
+}
+
+.line{      /*使用盒子模型画直线*/
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    background-color: rgba(0,0,0,0.1);
+    top: 440px;
+    left: 5%;
+}
+
+.list{          /*主题内容的整个界面*/
+    position: relative;
+    width: 100%;
+    flex: 1;
+    top: 450px;
+    padding: 30px;
+    overflow: auto;     /*溢出内容滚动可显示*/
+}
+
+.content{       /*设置书与书之间的间隔*/
+    display: flex;
+    height: auto;       /*自动计算高度*/
+    padding: 30px 0px;
+    text-decoration: none;
+    background-color: white;
+}
+
+.content:last-child{
+    display: flex;      /*最后一个内容块与设备底部之间没有间距，因为后面再没有内容了*/
+    padding-bottom: 0px;
+}
+
+.number{
+    height: 100px;      /*书的名次的设计*/
+    font-size: 40px;
+    height: 40px;
+    color: black;
+    padding-top: 123.5px;
+    padding-bottom: 123.5px;
+    padding-right: 40px;
+    margin: 0px;
+    border-width: 0px;
+}
+
+.book{              /*书的图片大小改动*/
+    height: 287px;
+}
+
+.introduce{         /*介绍部分的布局方式*/
+    display: flex;
+    flex-direction: column; /*列布局*/
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 287px;
+    width: 100%;        /*占满宽度*/
+}
+
+.introduce-top{
+    flex: 1;        /*与后面的相同部分平分高度*/
+    display: flex;
+    position: relative;
+    align-content: center;      /*垂直居中*/
+}
+
+.book-title{
+    width: 540px;       /*设定显示宽度，超过宽度部分换行显示*/
+    font-size: 40px;
+    color: black;
+}
+
+.people{
+    position: absolute;
+    height: 50px;  
+    background-color: rgba(233, 233, 233, 0.6);
+    border-radius: 20px;
+    right: 0px;
+}
+
+.people-part{
+    width: 140px;       
+    position: relative;     
+    display: flex;
+    list-style: none;       /*取消列表前面的表头标记*/
+    align-items: center;
+}
+
+.people-img{            /*人头标志位置调整*/
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+.population{
+    font-size: 30px;
+    color: rgba(0,0,0,0.35);
+}
+
+.author{
+    display: flex;
+    flex: 1;
+    font-size: 32px;
+    color: rgba(0,0,0,0.5);
+    align-items: center;        /*垂直居中*/
+}
+
+.name{
+    width: 540px;               /*设置显示宽度*/
+    overflow: hidden;           /*超出部分不显示*/
+    text-overflow:ellipsis;
+    white-space: nowrap;        /*超过宽度部分以省略号代替*/
+    padding-top: 10px;
+}
+
+
+.introduce-bottom{
+    position: relative;
+    flex: 1;
+    display: flex;
+    padding-top: 35px;
+    align-items: center;        /*内容居中*/
+}
+
+.introduce-rate{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.35);
+}
+
+.judge{
+    padding-left: 10px
+}
+
+.judge-img{
+    position: absolute;
+    height: 62px;
+    bottom: 15px;
+}
+

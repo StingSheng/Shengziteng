@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Done</title>
+    <link rel="stylesheet" href="style/style-done.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="title">
+            <img src="imgs/logo_big.png" alt="#">
+            <p>时间胶囊</p>
+        </a>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="index.html" class="items">首页</a>
+                </li>
+                <li>
+                    <a href="index-add.html" class="items items-active">添加</a>
+                </li>
+                <li>
+                    <a href="index-open.html" class="items">打开</a>
+                </li>
+            </ul>
+        </div>
+        <div class="back">
+            <a href="index.html" class="back-text">回胶囊日记</a>
+        </div>
+    </header>
+    <div class="content-title">
+        <div class="done-pill">
+            <p>胶囊添加成功</p>
+        </div>
+        <div class="pill-key">
+            <p>胶囊Key</p>
+        </div>
+        <div class="content">
+            <input type="text" value="{{key}}">
+            <p class="key-hint">你可以复制 key自己保存，也可以发送给你的好友，让他来打开胶囊。</p>
+        </div>
+    </div>
+</body>
+<script src="./scripts/done.js"></script>
+</html>

@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+  }
+
+.all{
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;         /*设置整个页面的排列方式*/
+    background-color: #eee;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont,'Segoe UI',
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+     'Helvetica Neue', sans-serif;
+}
+
+.top{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #d23e34;
+    padding-top: 30px;      /*设置排行榜三个字到屏幕最顶部的距离*/
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3); /*设置页面浏览的阴影*/
+}
+
+.title{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.selection{
+    padding: 50px;
+}
+
+.selection-range{
+    display: flex;
+    margin: 0;
+    border-radius: 30px;
+    background-color: #cd2523;
+    padding: 0px;
+}
+
+.selection-item{
+    flex: 1;              /*两部分平均分整个selection-range*/
+    text-align: center;
+    line-height: 90px;    /*设置行高*/
+    color: white;
+    font-size: 40px;
+    list-style: none;     /*隐藏列表的点*/
+}
+
+.selection-active{
+    background-color: #b9211f;   /*视觉上表示前面一个选项处于被选中的状态*/
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.choice{
+    padding: 40px;
+    border-top-left-radius: 30px;/*设置只有上面部分为圆角的白色部分*/
+    border-top-right-radius: 30px;
+    background-color: white;
+}
+
+.choice-range{
+    display: flex;          /*横向排列*/
+    overflow-x: auto;       /*x方向上如果溢出自动处理为滑动显示*/
+    padding: 0px;
+    margin: 0px;
+}
+
+.choice-item{
+    line-height: 40px;
+    background-color: #f7f7f7;
+    font-size: 30px;
+    padding-top: 15px;      /*设置内边框，将列表按钮分割开*/
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.choice-active{
+    background-color: #d23e34;/*视觉上表示前面一个选项处于被选中的状态*/
+    color: white;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    top: 450px;
+    overflow: auto;/*溢出内容滑动显示*/
+    padding: 30px;
+}
+
+.content{
+    display: block;
+    height: auto;/*高度自动计算*/
+    text-decoration: none;
+    padding: 20px;/*设置与设备边界之间的间距*/
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;/*设置内容块与块之间的间距*/
+}
+
+.content:last-child{
+    display: flex;      /*最后一个内容块与设备底部之间没有间距，因为后面再没有内容了*/
+    margin-bottom: 0px;
+}
+
+.upper{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cover-img{
+    width: 100%;
+}
+
+.rank-img{
+    position: absolute;/*将top标签覆盖在图片的左上角*/
+    left: 0px;
+    top: 0px;
+}
+
+.middle{
+    display: -webkit-box;
+    color: black;
+    font-size: 40px;
+    line-height: 1.5em;/*相当于line-height: 60px*/
+    font-weight: bold;
+    overflow: hidden;       /*进行溢出文字由省略号代替的操作*/
+    -webkit-line-clamp: 2;  /*显示的行数*/
+    -webkit-box-orient: vertical;
+}
+
+.judge{
+    font-size: 30px;/*直接使用边框设定将评价推到整行的最末端*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 68%;
+}
+
+.judge-img{
+    height: 40px;
+}
+
+.judge-text{
+    margin-right: 30px;
+    color: black;
+}
+
